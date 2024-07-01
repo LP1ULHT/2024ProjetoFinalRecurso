@@ -21,7 +21,7 @@
 
 > O não cumprimento deste aspectos incorre uma penalização de 50% da nota.
 
->Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Junho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
+>Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Julho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
 
 >Todos os trabalhos serão comparados utilizando um sistema de deteção de plágio.
 >Todos os trabalhos serão revistos e submetidos a avaliação oral
@@ -174,7 +174,7 @@ Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando 
 
 **Requisito 16.3**
 Se o valor X de ataques é superior ao numero maximo que jogadas ocorridas, o jogo volta para o início.
-(Testar isto no pandora)
+
 **Requisito 16.4**
 O jogador só pode fazer o combo especial *"TARZANTABORDA"* quando a estamina for maior que 500 e menor que 900.
 
