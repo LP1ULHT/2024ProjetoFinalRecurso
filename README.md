@@ -19,7 +19,7 @@
 >- É obrigatório o uso de listas ligadas.
 >- O trabalho deve ser desenvolvido e submetido de forma individual.
 
-> O não cumprimento deste aspectos incorre uma penalização de 50% da nota.
+**O não cumprimento dod aspectos supracitados incorre uma penalização de 50% da nota.**
 
 >Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Julho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
 
