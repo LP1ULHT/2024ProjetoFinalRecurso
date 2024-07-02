@@ -163,7 +163,7 @@ Cada ataque efectuado pelo jogador faz perder 23 pontos de estamina (com exceç�
 
 **Requisito 14**
 Quando um jogador utilizar o ataque *Defender*, ele **sobe 7 pontos** de estamina e recupera **13** pontos de vida. A recuperação de vida também é afetada pelo fator multiplicativo.
-- Exemplo: Se o jogador estiver com estamina abaixo de 250, recupera então 28 pontos de vida.
+- Exemplo: Se o jogador estiver com estamina abaixo de 250, recupera então 52 pontos de vida.
 
 **Requisito 15**
 Caso haja uma quantidade diferente de ataques entre os jogadores, os ataques não explicitados devem ser considerados como *Descansar*. 
