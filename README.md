@@ -54,13 +54,13 @@ OS jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou 
 O número de jogadores é sempre 2. Sendo um jogador humano inserindo dados pelo teclado ou ficheiro.
 
 **Requisito 4.1**
-O segundo jogador é computador use a geração de numeros aleatorios.
+O segundo jogador é o computador, que usa a geração de números aleatórios para fazer sua jogada.
 
 **Requisito 4.2**
 O segundo jogador computador faz sempre 5 ataques.
 
 **Requisito 4.3**
-O numero aleatorio é gerado com a função *srand* usando uma *seed* (numero inteiro) fornecida no inicio como argumento do programa.
+O número aleatório é gerado com a função srand usando uma seed (número inteiro) fornecida no início como argumento do programa.
 
 Exemplo para chamar o programa com seed com valor 3:
         *./main 3*
@@ -96,8 +96,8 @@ Se o primeiro numero é entre 12 e 15, o jogador joga um combo de acordo com seg
 |15| Furacão Thiago | TATAPAAA |
 
 **Requisito 4.6**
-Se o primeiro numero é entre 17, gera mais um numero aleatorio entre 1 e 17. O jogador chama o combo TarzantabordaX, onde X é o segundo numero aleatório gerado.
-
+Se o primeiro numero é 16, gera mais um numero aleatorio entre 1 e 17. 
+O jogador 2 chama então o combo especial TARZANTABORDAX, onde X é o segundo numero aleatório gerado.
 
 
 **Requisito 5**
