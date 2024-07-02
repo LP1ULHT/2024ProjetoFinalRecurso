@@ -19,7 +19,7 @@
 >- É obrigatório o uso de listas ligadas.
 >- O trabalho deve ser desenvolvido e submetido de forma individual.
 
-**O não cumprimento dod aspectos supracitados incorre uma penalização de 50% da nota.**
+**O não cumprimento dos aspetos supracitados incorre uma penalização de 50% da nota.**
 
 >Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Julho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
 
@@ -57,6 +57,23 @@ O número de jogadores é sempre 2. Sendo um jogador humano inserindo dados pelo
 O segundo jogador é computador use a geração de numeros aleatorios.
 Se o primeiro numero é entre 1 e 12, gera mais 5 numeros aleatórios (entre 1 e 12) para fazer 5 ataques de acordo com a seguinte tabela.
 (tabela só ataques).
+
+| **Numero Gerado** | **Nome do Ataque** | **Letra** | 
+| --- | --- | --- |
+|1| Zarabatana | Z |
+|2| Pontapé | P | 
+|3| Agarrar | A | 
+|4| Estalada | E |
+|5| Tombeta | T |
+|6| Rasteira | R |
+|7| Cotovelada | C |
+|8| Bicada | B | 
+|9| Onda de Choque | O |
+|10| Murro | M |
+|11| Defender | D |
+|12| Descansa | |
+
+
 Se o primeiro numero é entre 13 e 16, o jogador joga um combo de acordo com seguinte tabela,
 (tabela só combos simples).
 Se o primeiro numero é entre 17, gera mais um numero aleatorio entre 1 e 17. O jogador chama o combo TarzantabordaX, onde X é o segundo numero aleatório gerado.
