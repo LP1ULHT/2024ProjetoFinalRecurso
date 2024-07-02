@@ -55,8 +55,8 @@ O número de jogadores é sempre 2. Sendo um jogador humano inserindo dados pelo
 
 **Requisito 4.1**
 O segundo jogador é computador use a geração de numeros aleatorios.
-Se o primeiro numero é entre 1 e 12, gera mais 5 numeros aleatórios (entre 1 e 12) para fazer 5 ataques de acordo com a seguinte tabela.
-(tabela só ataques).
+Se o primeiro numero é entre 1 e 11, gera mais 5 numeros aleatórios (entre 1 e 11) para fazer 5 ataques de acordo com a seguinte tabela.
+
 
 | **Numero Gerado** | **Nome do Ataque** | **Letra** | 
 | --- | --- | --- |
@@ -71,11 +71,17 @@ Se o primeiro numero é entre 1 e 12, gera mais 5 numeros aleatórios (entre 1 e
 |9| Onda de Choque | O |
 |10| Murro | M |
 |11| Defender | D |
-|12| Descansa | |
 
 
-Se o primeiro numero é entre 13 e 16, o jogador joga um combo de acordo com seguinte tabela,
-(tabela só combos simples).
+Se o primeiro numero é entre 12 e 15, o jogador joga um combo de acordo com seguinte tabela,
+| Numero | Nome do Combo | Sequência de Letras |
+| --- | --- | --- |
+|12| Arrozão | ARROZAO |
+|13| Dad Bad | DADBAD |
+|14| Bife Wellington | STTEACC |
+|15| Furacão Thiago | TATAPAAA |
+
+
 Se o primeiro numero é entre 17, gera mais um numero aleatorio entre 1 e 17. O jogador chama o combo TarzantabordaX, onde X é o segundo numero aleatório gerado.
 
 **Requisito 4.12*
