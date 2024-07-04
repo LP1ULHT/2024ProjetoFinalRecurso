@@ -256,5 +256,9 @@ O jogo contém os seguintes códigos secretos que, quando escritos, produzem os 
 Usar como referencia exemplos dado em https://github.com/LP1ULHT/2024ProjectoFinal
 
 ## FAQ ##
+
+*Qual o valor da seed, se não for explicita na linha comando?*
+O valor da seed é 1.
+
 Ver https://github.com/LP1ULHT/2024ProjectoFinal
 
