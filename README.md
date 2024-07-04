@@ -258,7 +258,17 @@ Usar como referencia exemplos dado em https://github.com/LP1ULHT/2024ProjectoFin
 ## FAQ ##
 
 *Qual o valor da seed, se não for explicita na linha comando?*
+
 O valor da seed é 1.
+
+
+*Como se usa ao mesmo tempo a seed e ficheiro?`*
+
+A seed é o primeiro parametro e ficheiro é segundo parametro. 
+Não é possivel usar ficheiro como parametro unico. Tem de sempre mencionar uma seed, e por ficheiro como segundo parametro.
+Exemplo:
+       ./main 5 ficheiro.txt
+
 
 Ver https://github.com/LP1ULHT/2024ProjectoFinal
 
