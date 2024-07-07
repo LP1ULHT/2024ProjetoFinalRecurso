@@ -74,8 +74,8 @@ O numero aleatório gerado é entre 1 e tamanho do historico do jogador 1.
 O jogador dois joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
 Exemplo:
-Se historico do jogador 1 é [ZPAETRCBOMD].
-Se gera numeros aleatorios 1, 5, 11, 10, 2. O jogador fazer o ataque ZTDMP. 
+Se historico do jogador 1 é [ZPAETRCBOM].
+Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador fazer o ataque ZTMOP. 
 
 Nota:
 Sendo é necessário guardar todo o historico do jogador 1!
