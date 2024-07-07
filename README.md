@@ -42,13 +42,13 @@ Como ataque especial, quando um jogador estiver a perder, é possivel andar no t
 ---
 
 **Requisito 1.**
-Cada jogador começa com **837** pontos de vida e **791** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1003** pontos de estamina.
+Cada jogador começa com **837** pontos de vida e **1091** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1003** pontos de estamina.
 
 **Requisito 2**
 O jogador vence quando o seu oponente tem pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
 **Requisito 3**
-OS jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
+Os jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
 **Requisito 4**
 O número de jogadores é sempre 2. Sendo o primeiro jogador sempre humano inserindo dados pelo teclado ou ficheiro.
@@ -71,23 +71,27 @@ https://linux.die.net/man/3/srand
 
 **Requisito 4.4**
 O numero aleatório gerado é entre 1 e tamanho do historico do jogador 1.
-O jogador dois joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
+O jogador 2 joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
 Exemplo:
 Se historico do jogador 1 é [ZPAETRCBOM].
 Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador fazer o ataque ZTMOP. 
 
-Nota:
-Sendo é necessário guardar todo o historico do jogador 1!
-
 
 **Requisito 4.5**
-Quando o jogo começa, o jogador precisa já ter um histórico.
+Quando o jogo começa, o jogador precisa já ter um histórico inicial para o jogador 2 indexar.
 O histórico inicial é [ZPAETRCBOM].
 
 **Requisito 4.6**
-Se o numero aleatorio apontar para o combo TARZANTABORDA do historico do jogador 1.
-O jogador 2 chama então o combo especial TARZANTABORDAX, onde X é o segundo numero aleatório gerado.
+Quando jogador 1 tiver um historico mais que  50 ataques. O jogador 2 chama  o combo especial TARZANTABORDAX, onde X é o numero aleatório gerado entre 1 e 50.
+
+**Requisito 4.6**
+Quando jogador 2 obtem 5 ataques do historico de jogador 1, este contem um combo. O jogador2 só joga o combo.
+
+Exemplo:
+Se historico do jogador 1 é [Z**BADDAD**AETRCBOM].
+Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador vai fazer só ataque BADDAD que obteve ao gerar o numero aleatório 2, e descarta o resto. 
+
 
 **Requisito 5**
 Um jogador pode realizar até **5** ataques em cada jogada (não pode escrever mais de **5** caracteres).
@@ -186,6 +190,7 @@ As combinações e os pontos que reduzem a vida/estamina do oponente são mostra
 
 **Requisito 16.1**
 Um jogador só pode fazer um combo quando tem mais do que 750 de estamina. Se não tem estaminha suficiente, o combo se escrito é ignorado e se escreve a mensagem *Estamina Insuficiente* 
+**Este requisito 16.1 não se aplica ao combo especial TARZANTABORDA**
 
 **Requisito 16.2**
 Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando as letras *"TARZANTABORDA"* são escritas. Este combo permite que o jogador retroceda no tempo, revertendo o jogo para X ataques anteriores, onde X é o número especificado pelo jogador.
@@ -193,6 +198,8 @@ Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando 
 - Exemplo: Se o jogador quiser retroceder 3 ataques, ele escreve "TARZANTABORDA3".
 
 *O conceito por trás disso é apagar os X últimos elementos da lista ligada, forçando cada elemento da lista a conter o valor da vida e da estamina do jogador.*
+*Este combo pode se aplicar com qualquer valor de estamina*
+
 
 **Requisito 16.3**
 Se o valor X de ataques é superior ao numero maximo que jogadas ocorridas, o jogo volta para o início.
