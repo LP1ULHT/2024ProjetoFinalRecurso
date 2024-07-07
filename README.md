@@ -28,7 +28,7 @@
 
 
 ## Descrição do problema
-Neste projeto, vamos implementar um jogo de luta simples em linguagem C, onde um jogador humano contra jogaor computador lutam num épico cenário de porrada da grossa. 
+Neste projeto, vamos implementar um jogo de luta simples em linguagem C, onde um jogador humano contra jogador computador lutam num épico cenário de porrada da grossa. 
 Cada jogador terá a oportunidade de escolher um conjunto de ataques em cada rodada, mas também terá de gerir a sua estamina. 
 
 Além disso, dependendo de sua estamina, o jogador pode activar um *combo*, que é um ataque que causa um número significativo de danos e consome mais estamina.
@@ -70,16 +70,19 @@ https://linux.die.net/man/3/srand
 
 
 **Requisito 4.4**
-O numero aleatório gerado é entre 0 e tamanho do historico do jogador 1.
-O jogador dois jogar a ataques do histórico do jogador 1 indexada pelo numero aleatório.
+O numero aleatório gerado é entre 1 e tamanho do historico do jogador 1.
+O jogador dois joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
 Exemplo:
-Se historico do jogador 1 é  [ZPAETRCBOMD].
+Se historico do jogador 1 é [ZPAETRCBOMD].
 Se gera numeros aleatorios 1, 5, 11, 10, 2. O jogador fazer o ataque ZTDMP. 
+
+Nota:
+Sendo é necessário guardar todo o historico do jogador 1!
 
 
 **Requisito 4.5**
-Sendo assim quando o jogo começa, o jogador precisa já ter um histórico.
+Quando o jogo começa, o jogador precisa já ter um histórico.
 O histórico inicial é [ZPAETRCBOM].
 
 **Requisito 4.6**
