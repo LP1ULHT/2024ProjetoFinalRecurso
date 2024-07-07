@@ -42,7 +42,7 @@ Como ataque especial, quando um jogador estiver a perder, é possivel andar no t
 ---
 
 **Requisito 1.**
-Cada jogador começa com **837** pontos de vida e **1091** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1003** pontos de estamina.
+Cada jogador começa com **837** pontos de vida e **1003** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1013** pontos de estamina.
 
 **Requisito 2**
 O jogador vence quando o seu oponente tem pontos de vida nulos ou negativos. Neste caso, o jogo termina.
