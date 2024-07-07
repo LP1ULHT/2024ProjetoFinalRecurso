@@ -51,10 +51,10 @@ O jogador vence quando o seu oponente tem pontos de vida nulos ou negativos. Nes
 OS jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
 **Requisito 4**
-O número de jogadores é sempre 2. Sendo um jogador humano inserindo dados pelo teclado ou ficheiro.
+O número de jogadores é sempre 2. Sendo o primeiro jogador sempre humano inserindo dados pelo teclado ou ficheiro.
 
 **Requisito 4.1**
-O segundo jogador é o computador, que usa a geração de números aleatórios para fazer sua jogada.
+O segundo jogador é sempre o computador, que usa a geração de números aleatórios para fazer sua jogada.
 
 **Requisito 4.2**
 O segundo jogador computador faz sempre 5 ataques.
@@ -70,35 +70,21 @@ https://linux.die.net/man/3/srand
 
 
 **Requisito 4.4**
-Se o primeiro numero é entre 1 e 11, gera mais 5 numeros aleatórios (entre 1 e 11) para fazer 5 ataques de acordo com a seguinte tabela.
+O numero aleatório gerado é entre 0 e tamanho do historico do jogador 1.
+O jogador dois jogar a ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
-| **Numero Gerado** | **Nome do Ataque** | **Letra** | 
-| --- | --- | --- |
-|1| Zarabatana | Z |
-|2| Pontapé | P | 
-|3| Agarrar | A | 
-|4| Estalada | E |
-|5| Tombeta | T |
-|6| Rasteira | R |
-|7| Cotovelada | C |
-|8| Bicada | B | 
-|9| Onda de Choque | O |
-|10| Murro | M |
-|11| Defender | D |
+Exemplo:
+Se historico do jogador 1 é  [ZPAETRCBOMD].
+Se gera numeros aleatorios 1, 5, 11, 10, 2. O jogador fazer o ataque ZTDMP. 
+
 
 **Requisito 4.5**
-Se o primeiro numero é entre 12 e 15, o jogador joga um combo de acordo com seguinte tabela,
-| Numero | Nome do Combo | Sequência de Letras |
-| --- | --- | --- |
-|12| Arrozão | ARROZAO |
-|13| Dad Bad | DADBAD |
-|14| Bife Wellington | STTEACC |
-|15| Furacão Thiago | TATAPAAA |
+Sendo assim quando o jogo começa, o jogador precisa já ter um histórico.
+O histórico inicial é [ZPAETRCBOM].
 
 **Requisito 4.6**
-Se o primeiro numero é 16, gera mais um numero aleatorio entre 1 e 17. 
+Se o numero aleatorio apontar para o combo TARZANTABORDA do historico do jogador 1.
 O jogador 2 chama então o combo especial TARZANTABORDAX, onde X é o segundo numero aleatório gerado.
-
 
 **Requisito 5**
 Um jogador pode realizar até **5** ataques em cada jogada (não pode escrever mais de **5** caracteres).
