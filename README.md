@@ -41,7 +41,7 @@ Como ataque especial, quando um jogador estiver a perder, é possivel andar no t
 ### Core
 ---
 
-**Requisito 1.**
+**Requisito 1 (NOVO!)**
 Cada jogador começa com **837** pontos de vida e **1091** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1103** pontos de estamina.
 
 **Requisito 2**
@@ -50,16 +50,16 @@ O jogador vence quando o seu oponente tem pontos de vida nulos ou negativos. Nes
 **Requisito 3**
 Os jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
-**Requisito 4**
-O número de jogadores é sempre 2. Sendo o primeiro jogador sempre humano inserindo dados pelo teclado ou ficheiro.
+**Requisito 4 (NOVO!)**
+O número de jogadores é sempre 2. Sendo o primeiro jogador (jogador 1) sempre humano inserindo dados pelo teclado ou ficheiro.
 
-**Requisito 4.1**
-O segundo jogador é sempre o computador, que usa a geração de números aleatórios para fazer sua jogada.
+**Requisito 4.1 (NOVO!)**
+O segundo jogador (jogador 2) é sempre o computador, que usa a geração de números aleatórios para fazer sua jogada.
 
-**Requisito 4.2**
+**Requisito 4.2 (NOVO!)**
 O segundo jogador computador faz sempre 5 ataques.
 
-**Requisito 4.3**
+**Requisito 4.3 (NOVO!)**
 O número aleatório é gerado com a função srand usando uma seed (número inteiro) fornecida no início como argumento do programa.
 
 Exemplo para chamar o programa com seed com valor 3:
@@ -69,7 +69,7 @@ Mais informação sobre a função em:
 https://linux.die.net/man/3/srand
 
 
-**Requisito 4.4**
+**Requisito 4.4 (NOVO!)**
 O numero aleatório gerado é entre 1 e tamanho do historico do jogador 1.
 O jogador 2 joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
@@ -78,22 +78,25 @@ Se historico do jogador 1 é [ZPAETRCBOM].
 Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador fazer o ataque ZTMOP. 
 
 
-**Requisito 4.5**
-Quando o jogo começa, o jogador precisa já ter um histórico inicial para o jogador 2 indexar.
+**Requisito 4.5 (NOVO!)**
+Quando o jogo começa, o jogador precisa já ter um histórico inicial para o jogador 2 indexar seus primeiros ataques.
 O histórico inicial é [ZPAETRCBOM].
 
-**Requisito 4.6**
-Quando jogador 1 tiver um historico mais que  50 ataques. O jogador 2 chama  o combo especial TARZANTABORDAX, onde X é o numero aleatório gerado entre 1 e 50.
+**Requisito 4.6 (NOVO!)**
+Quando jogador 1 tiver um historico maiior que 50 ataques. O jogador 2 chama o combo especial TARZANTABORDAX, onde X é o numero aleatório gerado entre 1 e 50.
 
-**Requisito 4.6**
-Quando jogador 2 obtem 5 ataques do historico de jogador 1, este contem um combo. O jogador2 só joga o combo.
+**Requisito 4.7 (NOVO!)**
+O jogador 2 só pode execitar o combo especial TARZANTABORDA uma vez
+
+**Requisito 4.7 (NOVO!)**
+Quando jogador 2 obtem 5 ataques do historico de jogador 1, e um destes ataques é um combo. O jogador2 só joga o combo.
 
 Exemplo:
-Se historico do jogador 1 é [Z**BADDAD**AETRCBOM].
-Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador vai fazer só ataque BADDAD que obteve ao gerar o numero aleatório 2, e descarta o resto. 
+Se historico do jogador 1 é [Z**BADDAD**AETRCBOM] e se gera numeros aleatórios 1, 5, 10, 2, 8. 
+O jogador vai fazer só ataque BADDAD que obteve ao gerar o numero aleatório 2, e descarta o resto. 
 
 
-**Requisito 5**
+**Requisito 5 (NOVO!)**
 Um jogador pode realizar até **5** ataques em cada jogada (não pode escrever mais de **5** caracteres).
 
 **Requisito 6**
@@ -154,7 +157,7 @@ Cada ataque efectuado pelo jogador faz perder 23 pontos de estamina (com exceç�
 
 *Combos não são afetados pelo fator multiplicativo.*
 
-**Requisito 14**
+**Requisito 14 (NOVO!)**
 Quando um jogador utilizar o ataque *Defender*, ele **sobe 7 pontos** de estamina e recupera **13** pontos de vida. A recuperação de vida também é afetada pelo fator multiplicativo.
 - Exemplo: Se o jogador estiver com estamina abaixo de 250, recupera então 52 pontos de vida.
 
@@ -188,7 +191,7 @@ As combinações e os pontos que reduzem a vida/estamina do oponente são mostra
 | Bife Wellington | STTEACC | 300 | 300 |
 | Furacão Thiago | TATAPAAA | 200 | 200 |
 
-**Requisito 16.1**
+**Requisito 16.1 (NOVO!)**
 Um jogador só pode fazer um combo quando tem mais do que 750 de estamina. Se não tem estaminha suficiente, o combo se escrito é ignorado e se escreve a mensagem *Estamina Insuficiente* 
 **Este requisito 16.1 não se aplica ao combo especial TARZANTABORDA**
 
@@ -213,7 +216,7 @@ O jogador só pode fazer o combo especial *"TARZANTABORDA"* quando a estamina fo
 **Requisito 18**
 O histórico de ataques realizados, pontos de vida e pontos de estamina de cada jogador é obrigatoriamente guardado numa lista ligada.
 
-**Requisito 19**
+**Requisito 19 (NOVO!)**
 Antes de um jogador fazer sua jogada, os últimos **17** ataques realizados pelo jogador são impressos no ecrã.
 
 **Requisito 20**
@@ -222,11 +225,55 @@ Antes de um jogador fazer sua jogada, os pontos de sua vida e estamina são impr
 **Requisito 21**
 Se o utilizador escrever algo inválido ou fora destes requisitos, deve escrever "Entrada invalida" e termina o jogo!
 
-**Requisito 22.**
-Pode se inserir as jogadas por um ficheiro. Ver exemplo no fim do enunciado.
+**Requisito 22.1 (NOVO!)**
+O programa pode correr com 3 parametros, o segundo é modo silencio, e terceiro é nome ficheiro.
+Se ativar modo silencio, o programa só pode imprimir as 4 seguintes mensagens:
 
-**Requisito 23**
-Cada linha do ficheiro representa uma jogada tal como descrito no requisito 5, 6, 8 e 16.
+- Empate!
+
+- Entrada invalida
+
+- Jogador 1 venceu o jogo!
+
+- Jogador 2 venceu o jogo!
+
+Para ativar o modo silencio, escreve a letra 'S' como segundo parametro.
+Para desativar o modo silencio, escreve a letra 'V' como segundo parametro.
+Quando se quer por o parametro segundo, é obrigatório escrever sempre o primeiro parametro.
+Exemplo com seed valor 5, modo verboso
+
+       /.main 5 V
+
+Exemplo com seed valor 1, modo silencioso
+
+       /.main 1 S
+
+
+
+Nota 1: O modo silencio foi desenhado para certos teste do pandora não causarem output excessivo.
+
+Nota 2: Os testes silenciosos iremos fornecer os ficheiros de input e output para os alunos testarem em casa e saberem o que foi silenciado.
+
+Nota 3: "./main S" é invalido, "./main 3" é válido.
+
+**Requisito 22 (NOVO!)**
+Pode se inserir as jogadas do jogador 1 por um ficheiro. 
+Tal é executado na linha comando escrevendo o nome do ficheiro depois do segundo parametro.
+Quando se escreve ficheiro, é obrigatório escrever sempre o primeiro e segundo parametro.
+
+Exemplo com seed valor 5, verboso, lendo ficheiro "Manuel.txt"
+
+       /.main 1 V Manuel.txt
+
+
+Nota 1: "./main Manuel.txt" é invalido.
+
+Nota 2: "./main 1 Manuel.txt" é invalido.
+
+
+**Requisito 23 (NOVO!)** 
+Cada linha do ficheiro representa uma jogada só do jogador 1.
+Segue regras dos requisito 5, 6, 8 e 16.
 
 **Requisito 24**
 Cada linha corresponde a uma jogada de **5** ataques ou um combo do jogador.
@@ -246,7 +293,7 @@ O jogo contém os seguintes códigos secretos que, quando escritos, produzem os 
 
 - Nood-Mode*X* - Jogador 2 - Restaura a vida a X pontos. X deve ser um número positivo.
 
----
+
 ### Exemplos
 
 Usar como referencia exemplos dado em https://github.com/LP1ULHT/2024ProjectoFinal
