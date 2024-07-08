@@ -1,10 +1,10 @@
-# Projecto Final Recurso 2024
+# Projecto Final Recurso 2024 
 
 **UNIVERSIDADE LUSÓFONA DE HUMANIDADES E TECNOLOGIAS**
 
 *Linguagens de Programação I*
 
-# Projecto Final 2024 - Mortal Pandora C_ombat
+# Projecto Final 2024 - Mortal Pandora C_ombat - v2
 ![image](https://github.com/LP1ULHT/2024ProjectoFinal/assets/98768479/0f0cd02f-d91b-4551-bd2e-bfa1e9bee2ad)
 
 
@@ -28,7 +28,7 @@
 
 
 ## Descrição do problema
-Neste projeto, vamos implementar um jogo de luta simples em linguagem C, onde um jogador humano contra jogaor computador lutam num épico cenário de porrada da grossa. 
+Neste projeto, vamos implementar um jogo de luta simples em linguagem C, onde um jogador humano contra jogador computador lutam num épico cenário de porrada da grossa. 
 Cada jogador terá a oportunidade de escolher um conjunto de ataques em cada rodada, mas também terá de gerir a sua estamina. 
 
 Além disso, dependendo de sua estamina, o jogador pode activar um *combo*, que é um ataque que causa um número significativo de danos e consome mais estamina.
@@ -41,67 +41,62 @@ Como ataque especial, quando um jogador estiver a perder, é possivel andar no t
 ### Core
 ---
 
-**Requisito 1.**
-Cada jogador começa com **837** pontos de vida e **791** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1003** pontos de estamina.
+**Requisito 1 (NOVO!)**
+Cada jogador começa com **837** pontos de vida e **1091** pontos de estamina. Um jogador nunca pode ter mais do que **999** pontos de vida e **1103** pontos de estamina.
 
 **Requisito 2**
 O jogador vence quando o seu oponente tem pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
 **Requisito 3**
-OS jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
+Os jogadores podem empatar quando obtêm ao mesmo tempo pontos de vida nulos ou negativos. Neste caso, o jogo termina.
 
-**Requisito 4**
-O número de jogadores é sempre 2. Sendo um jogador humano inserindo dados pelo teclado ou ficheiro.
+**Requisito 4 (NOVO!)**
+O número de jogadores é sempre 2. Sendo o primeiro jogador (jogador 1) sempre humano inserindo dados pelo teclado ou ficheiro.
 
-**Requisito 4.1**
-O segundo jogador é o computador, que usa a geração de números aleatórios para fazer sua jogada.
+**Requisito 4.1 (NOVO!)**
+O segundo jogador (jogador 2) é sempre o computador, que usa a geração de números aleatórios para fazer sua jogada.
 
-**Requisito 4.2**
+**Requisito 4.2 (NOVO!)**
 O segundo jogador computador faz sempre 5 ataques.
 
-**Requisito 4.3**
+**Requisito 4.3 (NOVO!)**
 O número aleatório é gerado com a função srand usando uma seed (número inteiro) fornecida no início como argumento do programa.
 
 Exemplo para chamar o programa com seed com valor 3:
-
-       ./main 3
+        *./main 3*
 
 Mais informação sobre a função em:
 https://linux.die.net/man/3/srand
 
 
-**Requisito 4.4**
-Se o primeiro numero é entre 1 e 11, gera mais 5 numeros aleatórios (entre 1 e 11) para fazer 5 ataques de acordo com a seguinte tabela.
+**Requisito 4.4 (NOVO!)**
+O numero aleatório gerado é entre 1 e tamanho do historico do jogador 1.
+O jogador 2 joga ataques do histórico do jogador 1 indexada pelo numero aleatório.
 
-| **Numero Gerado** | **Nome do Ataque** | **Letra** | 
-| --- | --- | --- |
-|1| Zarabatana | Z |
-|2| Pontapé | P | 
-|3| Agarrar | A | 
-|4| Estalada | E |
-|5| Tombeta | T |
-|6| Rasteira | R |
-|7| Cotovelada | C |
-|8| Bicada | B | 
-|9| Onda de Choque | O |
-|10| Murro | M |
-|11| Defender | D |
-
-**Requisito 4.5**
-Se o primeiro numero é entre 12 e 15, o jogador joga um combo de acordo com seguinte tabela,
-| Numero | Nome do Combo | Sequência de Letras |
-| --- | --- | --- |
-|12| Arrozão | ARROZAO |
-|13| Dad Bad | DADBAD |
-|14| Bife Wellington | STTEACC |
-|15| Furacão Thiago | TATAPAAA |
-
-**Requisito 4.6**
-Se o primeiro numero é 16, gera mais um numero aleatorio entre 1 e 17. 
-O jogador 2 chama então o combo especial TARZANTABORDAX, onde X é o segundo numero aleatório gerado.
+Exemplo:
+Se historico do jogador 1 é [ZPAETRCBOM].
+Se gera numeros aleatorios 1, 5, 10, 8, 2. O jogador fazer o ataque ZTMOP. 
 
 
-**Requisito 5**
+**Requisito 4.5 (NOVO!)**
+Quando o jogo começa, o jogador precisa já ter um histórico inicial para o jogador 2 indexar seus primeiros ataques.
+O histórico inicial é [ZPAETRCBOM].
+
+**Requisito 4.6 (NOVO!)**
+Quando jogador 1 tiver um historico maiior que 50 ataques. O jogador 2 chama o combo especial TARZANTABORDAX, onde X é o numero aleatório gerado entre 1 e 50.
+
+**Requisito 4.7 (NOVO!)**
+O jogador 2 só pode execitar o combo especial TARZANTABORDA uma vez
+
+**Requisito 4.7 (NOVO!)**
+Quando jogador 2 obtem 5 ataques do historico de jogador 1, e um destes ataques é um combo. O jogador2 só joga o combo.
+
+Exemplo:
+Se historico do jogador 1 é [Z**BADDAD**AETRCBOM] e se gera numeros aleatórios 1, 5, 10, 2, 8. 
+O jogador vai fazer só ataque BADDAD que obteve ao gerar o numero aleatório 2, e descarta o resto. 
+
+
+**Requisito 5 (NOVO!)**
 Um jogador pode realizar até **5** ataques em cada jogada (não pode escrever mais de **5** caracteres).
 
 **Requisito 6**
@@ -162,7 +157,7 @@ Cada ataque efectuado pelo jogador faz perder 23 pontos de estamina (com exceç�
 
 *Combos não são afetados pelo fator multiplicativo.*
 
-**Requisito 14**
+**Requisito 14 (NOVO!)**
 Quando um jogador utilizar o ataque *Defender*, ele **sobe 7 pontos** de estamina e recupera **13** pontos de vida. A recuperação de vida também é afetada pelo fator multiplicativo.
 - Exemplo: Se o jogador estiver com estamina abaixo de 250, recupera então 52 pontos de vida.
 
@@ -196,8 +191,9 @@ As combinações e os pontos que reduzem a vida/estamina do oponente são mostra
 | Bife Wellington | STTEACC | 300 | 300 |
 | Furacão Thiago | TATAPAAA | 200 | 200 |
 
-**Requisito 16.1**
+**Requisito 16.1 (NOVO!)**
 Um jogador só pode fazer um combo quando tem mais do que 750 de estamina. Se não tem estaminha suficiente, o combo se escrito é ignorado e se escreve a mensagem *Estamina Insuficiente* 
+**Este requisito 16.1 não se aplica ao combo especial TARZANTABORDA**
 
 **Requisito 16.2**
 Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando as letras *"TARZANTABORDA"* são escritas. Este combo permite que o jogador retroceda no tempo, revertendo o jogo para X ataques anteriores, onde X é o número especificado pelo jogador.
@@ -205,6 +201,8 @@ Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando 
 - Exemplo: Se o jogador quiser retroceder 3 ataques, ele escreve "TARZANTABORDA3".
 
 *O conceito por trás disso é apagar os X últimos elementos da lista ligada, forçando cada elemento da lista a conter o valor da vida e da estamina do jogador.*
+*Este combo pode se aplicar com qualquer valor de estamina*
+
 
 **Requisito 16.3**
 Se o valor X de ataques é superior ao numero maximo que jogadas ocorridas, o jogo volta para o início.
@@ -218,7 +216,7 @@ O jogador só pode fazer o combo especial *"TARZANTABORDA"* quando a estamina fo
 **Requisito 18**
 O histórico de ataques realizados, pontos de vida e pontos de estamina de cada jogador é obrigatoriamente guardado numa lista ligada.
 
-**Requisito 19**
+**Requisito 19 (NOVO!)**
 Antes de um jogador fazer sua jogada, os últimos **17** ataques realizados pelo jogador são impressos no ecrã.
 
 **Requisito 20**
@@ -227,14 +225,51 @@ Antes de um jogador fazer sua jogada, os pontos de sua vida e estamina são impr
 **Requisito 21**
 Se o utilizador escrever algo inválido ou fora destes requisitos, deve escrever "Entrada invalida" e termina o jogo!
 
+**Requisito 22.1 (NOVO!)**
+O programa pode correr com 3 parametros, o segundo é modo silencio, e terceiro é nome ficheiro.
+Se ativar modo silencio, o programa só pode imprimir as 4 seguintes mensagens:
+
+- Empate!
+
+- Entrada invalida
+
+- Jogador 1 venceu o jogo!
+
+- Jogador 2 venceu o jogo!
+
+Para ativar o modo silencio, escreve a letra 'S' como segundo parametro.
+Para desativar o modo silencio, escreve a letra 'V' como segundo parametro.
+Quando se quer por o parametro segundo, é obrigatório escrever sempre o primeiro parametro.
+Exemplo com seed valor 5, modo verboso
+
+       /.main 5 V
+
+Exemplo com seed valor 1, modo silencioso
+
+       /.main 1 S
+
+
+
+Nota 1: O modo silencio foi desenhado para certos teste do pandora não causarem output excessivo.
+
+Nota 2: Os testes silenciosos iremos fornecer os ficheiros de input e output para os alunos testarem em casa e saberem o que foi silenciado.
+
+Nota 3: "./main S" é invalido, "./main 3" é válido.
+
 **Requisito 22 (NOVO!)**
-Pode se inserir as jogadas do jogadro1 por um ficheiro. Ver exemplo no fim do enunciado.
-Tal é executado na linha comando escrevendo depois do numero da seed. 
-É obrigatório escrever sempre o número da seed antes.
+Pode se inserir as jogadas do jogador 1 por um ficheiro. 
+Tal é executado na linha comando escrevendo o nome do ficheiro depois do segundo parametro.
+Quando se escreve ficheiro, é obrigatório escrever sempre o primeiro e segundo parametro.
 
-Exemplo com seed valor 5, lendo ficheiro "Manuel.txt"
+Exemplo com seed valor 5, verboso, lendo ficheiro "Manuel.txt"
 
-       /.main 1 Manuel.txt
+       /.main 1 V Manuel.txt
+
+
+Nota 1: "./main Manuel.txt" é invalido.
+
+Nota 2: "./main 1 Manuel.txt" é invalido.
+
 
 **Requisito 23 (NOVO!)** 
 Cada linha do ficheiro representa uma jogada só do jogador 1.
@@ -258,7 +293,7 @@ O jogo contém os seguintes códigos secretos que, quando escritos, produzem os 
 
 - Nood-Mode*X* - Jogador 2 - Restaura a vida a X pontos. X deve ser um número positivo.
 
----
+
 ### Exemplos
 
 Usar como referencia exemplos dado em https://github.com/LP1ULHT/2024ProjectoFinal
