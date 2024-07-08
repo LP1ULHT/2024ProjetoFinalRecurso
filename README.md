@@ -22,6 +22,8 @@
 **O não cumprimento dos aspetos supracitados incorre uma penalização de 50% da nota.**
 
 >Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Julho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
+>**No pandora, juntar ao grupo LP12024v2 Password: PDWTRecurso**
+>
 
 >Todos os trabalhos serão comparados utilizando um sistema de deteção de plágio.
 >Todos os trabalhos serão revistos e submetidos a avaliação oral
