@@ -63,7 +63,8 @@ O segundo jogador computador faz sempre 5 ataques.
 O número aleatório é gerado com a função srand usando uma seed (número inteiro) fornecida no início como argumento do programa.
 
 Exemplo para chamar o programa com seed com valor 3:
-        *./main 3*
+
+       ./main 3
 
 Mais informação sobre a função em:
 https://linux.die.net/man/3/srand
@@ -226,11 +227,18 @@ Antes de um jogador fazer sua jogada, os pontos de sua vida e estamina são impr
 **Requisito 21**
 Se o utilizador escrever algo inválido ou fora destes requisitos, deve escrever "Entrada invalida" e termina o jogo!
 
-**Requisito 22.**
-Pode se inserir as jogadas por um ficheiro. Ver exemplo no fim do enunciado.
+**Requisito 22 (NOVO!)**
+Pode se inserir as jogadas do jogadro1 por um ficheiro. Ver exemplo no fim do enunciado.
+Tal é executado na linha comando escrevendo depois do numero da seed. 
+É obrigatório escrever sempre o número da seed antes.
 
-**Requisito 23**
-Cada linha do ficheiro representa uma jogada tal como descrito no requisito 5, 6, 8 e 16.
+Exemplo com seed valor 5, lendo ficheiro "Manuel.txt"
+
+       /.main 1 Manuel.txt
+
+**Requisito 23 (NOVO!)** 
+Cada linha do ficheiro representa uma jogada só do jogador 1.
+Segue regras dos requisito 5, 6, 8 e 16.
 
 **Requisito 24**
 Cada linha corresponde a uma jogada de **5** ataques ou um combo do jogador.
