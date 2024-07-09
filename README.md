@@ -298,6 +298,10 @@ O jogo contém os seguintes códigos secretos que, quando escritos, produzem os 
 
 ### Exemplos
 
+Ficheiros dos teste 5,7,10,15,17,18, 21 23 com inputs e outputs na seguinte pasta:
+
+https://github.com/LP1ULHT/2024ProjetoFinalRecurso/tree/main/exemplos
+
 Usar como referencia exemplos dado em https://github.com/LP1ULHT/2024ProjectoFinal
 
 ## FAQ ##
