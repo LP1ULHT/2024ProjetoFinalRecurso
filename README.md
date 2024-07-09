@@ -321,3 +321,15 @@ Exemplo:
 
 Ver https://github.com/LP1ULHT/2024ProjectoFinal
 
+As contas não batem certo como analisar?
+
+Em baixo segue exemplo usado no projeto inicial, onde 99% dos alunos fazendo esta analise resolviam os problemas.
+A abordagem é imprimir o resultados das contas todas e confirmar os resultados estão corretos.
+Neste caso especifico tem se atenção à situação do Defender e não se puder ultrapassar os valores máximos de estamina e vida.
+
+![Image20240625200357](https://github.com/LP1ULHT/2024ProjetoFinalRecurso/assets/98768479/e98a8029-5e57-45a3-911a-0d4b09056b7e)
+
+
+
+
+
