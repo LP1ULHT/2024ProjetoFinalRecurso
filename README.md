@@ -285,7 +285,7 @@ Se a linha contem um combo com estamina suficiente, a linha é ignorada, e a **p
 **Requisito 25**
 O jogo contém os seguintes códigos secretos que, quando escritos, produzem os seguintes efeitos:
 
-- Modo-Jesus - Reinício do jogo, ambos os jogadores voltam a ter estamina a 791 e vida a 837 e no histórico não consta nenhum golpe.
+- Modo-Jesus - Reinício do jogo, ambos os jogadores voltam a ter estamina a 1091 e vida a 837 e no histórico não consta nenhum golpe.
 
 - Alt-F4*X* - Jogador 1 - Restaura a estamina a X pontos. X deve ser um número positivo.
 
