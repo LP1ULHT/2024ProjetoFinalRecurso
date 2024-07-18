@@ -329,6 +329,11 @@ Neste caso especifico tem se atenção à situação do Defender e não se puder
 
 ![Image20240625200357](https://github.com/LP1ULHT/2024ProjetoFinalRecurso/assets/98768479/e98a8029-5e57-45a3-911a-0d4b09056b7e)
 
+Outra forma de analisar é imprimir os numeros da seed e ver se bate nas posicoes certas da lista
+![image](https://github.com/user-attachments/assets/05b3569d-5d6c-47ae-b1f7-16424476a3c8)
+
+
+
 
 
 
