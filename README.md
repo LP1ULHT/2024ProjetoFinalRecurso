@@ -151,7 +151,7 @@ Cada ataque efectuado pelo jogador faz perder 23 pontos de estamina (com exceç�
 
  - **Estamina > 750** - Perde vida que é descrita na tabela do Requisito 10
  
- - **Estamina > 500** - Perde **dobro** da vida que é descrita na tabela do Requisito 10
+ - **Estamina > ** - Perde **dobro** da vida que é descrita na tabela do Requisito 10
  
  - **Estamina > 250** - Perde **triplo** da vida que é descrita na tabela do Requisito 10 
 
@@ -203,14 +203,14 @@ Existe um combo especial chamado *Lucio Tarzan Reversal*, que é ativado quando 
 - Exemplo: Se o jogador quiser retroceder 3 ataques, ele escreve "TARZANTABORDA3".
 
 *O conceito por trás disso é apagar os X últimos elementos da lista ligada, forçando cada elemento da lista a conter o valor da vida e da estamina do jogador.*
-*Este combo pode se aplicar com qualquer valor de estamina*
+*Este combo pode se aplicar com qualquer valor de estamina menor que 900*
 
 
 **Requisito 16.3**
 Se o valor X de ataques é superior ao numero maximo que jogadas ocorridas, o jogo volta para o início.
 
 **Requisito 16.4**
-O jogador só pode fazer o combo especial *"TARZANTABORDA"* quando a estamina for maior que 500 e menor que 900.
+O jogador só pode fazer o combo especial *"TARZANTABORDA"* quando a estamina for menor que 900.
 
 ### Implementação
 ---
