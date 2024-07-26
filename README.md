@@ -1,4 +1,4 @@
-# Projecto Final Recurso 2024 
+# Projecto Final Recurso e Epoca Especial 2024 
 
 **UNIVERSIDADE LUSÓFONA DE HUMANIDADES E TECNOLOGIAS**
 
@@ -21,7 +21,7 @@
 
 **O não cumprimento dos aspetos supracitados incorre uma penalização de 50% da nota.**
 
->Este exercício deverá ser submetido na plataforma Pandora até às 23h59 de dia 24 Julho e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
+>Este exercício deverá ser submetido na plataforma Pandora até às 10h00 de dia 30 Julho (prazo epoca especial) e será contabilizado para a nota final da unidade curricular de acordo com os critérios disponibilizados na página da disciplina, concretamente nos slides da primeira aula.
 >**No pandora, juntar ao grupo LP12024v2 Password: PDWTRecurso**
 >
 
